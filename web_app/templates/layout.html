@@ -1,0 +1,35 @@
+<!-- web_app/templates/layout.html -->
+
+<!doctype html>
+<html>
+  <head>
+    {% block title %}
+      <title>My Web App</title>
+    {% endblock %}
+  </head>
+
+  <body style="background-color: #f2a900;">
+
+    <!-- SITE NAVIGATION -->
+    <div class="container">
+      <div id="nav">
+        {% block nav %}
+          <h1>Cooper Vos</h1>
+          <ul text-decoration: none;">
+            <li style="display: inline; padding:.2em; font-size: 20px;"><a href="/">Home</a></li>
+            <li style="display: inline; padding:.2em; font-size: 20px;"><a href="/tweets">Tweets</a></li>
+          </ul>
+        {% endblock %}
+      </div>
+
+      <!-- PAGE CONTENTS -->
+      <div id="content">
+        {% block content %}
+        <p>This is a Flask app!</p>
+        {% endblock %}
+      </div>
+
+    </div>
+
+  </body>
+</html>
