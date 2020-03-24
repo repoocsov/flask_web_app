@@ -1,0 +1,10 @@
+{% extends "twitter.html" %}
+
+{% block content %}
+
+    <h3>{{ user[0].name }}</h3>
+    {% for tweet in tweets %}
+        <li>{{ tweet.full_text }}</li>
+    {% endfor %}
+
+{% endblock %}

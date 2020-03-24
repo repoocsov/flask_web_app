@@ -1,0 +1,7 @@
+{% extends "twitter.html" %}
+
+{% block content %}
+
+    {{ user }}
+    <a href='/twitter/{{ user }}.json'>Get this users tweets in JSON format</a>
+{% endblock %}

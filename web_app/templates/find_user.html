@@ -1,0 +1,15 @@
+{% extends "twitter.html" %}
+
+{% block content %}
+
+    <h2>Find User</h2>
+
+    <p>Use this form to locate a specific user's tweets</p>
+
+    <form action="/twitter/find_user/display" method="POST">
+        <label>User:</label>
+        <input type="text" name="user" placeholder="jack" value="jack">
+        <button>Submit</button>
+    </form>
+
+{% endblock %}

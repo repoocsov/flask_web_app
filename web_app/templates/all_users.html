@@ -1,0 +1,9 @@
+{% extends "twitter.html" %}
+
+{% block content %}
+    <h3>Click username to see tweets</h3>
+    {% for user in users %}
+        <li><a href="/twitter/{{ user.id }}">{{ user.name }}</a></li>
+    {% endfor %}
+
+{% endblock %}
