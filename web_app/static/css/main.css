@@ -1,0 +1,33 @@
+body{
+    background-color: #1DA1F2 !important;
+    font-family: 'Baloo Da 2', cursive !important;
+    font-size: large;
+    font-weight: 600;
+}
+body > div > nav{
+    border: 0px;
+    border-radius: 0 !important;
+    background-color: #E8F1F2 !important;
+}
+.container-fluid{
+    padding:0;
+}
+body > div > nav > div > div, body > div > nav > div > ul{
+    padding:8px !important;
+}
+.all_users li{
+    text-decoration: none !important;
+    list-style-type: none;
+}
+.all_users li a{
+    color: #13293D !important;
+}
+.all_users li a:hover{
+    color: #AB3428 !important;
+}
+#content{
+    margin-left: 10px !important;
+}
+#content > div{
+    border-bottom: 0px !important;
+}

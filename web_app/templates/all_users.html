@@ -2,8 +2,9 @@
 
 {% block content %}
     <h3>Click username to see tweets</h3>
+    <ul class="all_users">
     {% for user in users %}
         <li><a href="/twitter/{{ user.id }}">{{ user.name }}</a></li>
     {% endfor %}
-
+    </ul>
 {% endblock %}

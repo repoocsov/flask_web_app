@@ -6,31 +6,54 @@
     {% block title %}
       <title>My Web App</title>
     {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
-
-  <body style="background-color: #f2a900;">
-
-    <!-- SITE NAVIGATION -->
-    <div class="container">
-      <div id="nav">
-        {% block nav %}
-          <h1>Cooper Vos</h1>
-          <ul text-decoration: none;">
-            <li style="display: inline; padding:.2em; font-size: 20px;"><a href="/">Home</a></li>
-            <li style="display: inline; padding:.2em; font-size: 20px;"><a href="/twitter">Twitter</a></li>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Flask Web App</a>
+          </div>
+          <ul class="nav navbar-nav">
+            {% block nav %}
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li>    
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="/twitter">Twitter
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/twitter/find_user">Get User Tweets</a></li>
+                    <li><a href="/twitter/all_users">Display All Retrieved Users</a></li>
+                  </ul>
+                </li>
+              
+              </li>
+            {% endblock %}
           </ul>
-        {% endblock %}
-      </div>
-
-      <!-- PAGE CONTENTS -->
+        </div>
+      </nav>
       <div id="content">
         {% block content %}
-        <p>This is the Flask home page. Currently this web app only has the home and Twitter directories.</p>
-        <img src="https://www.aps.edu/sapr/images/pnglot.comtwitterbirdlogopng139932.png/image" style="width:40%; height:40%;">
+        <div class="page-header">
+          <h1>Home</h1>
+        </div>
+        <p>
+          Setup:
+          <ol>
+            <li>pipenv --python 3.7</li>
+            <li>pipenv install Flask Flask-SQLAlchemy Flask-Migrate</li>
+            <li>pipenv install python-dotenv requests basilica tweepy</li>
+          </ol>
+        </p>
         {% endblock %}
       </div>
-
-    </div>
-
+    </div> 
   </body>
 </html>
