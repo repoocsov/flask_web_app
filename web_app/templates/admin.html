@@ -1,0 +1,17 @@
+<!-- web_app/templates/admin.html -->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Admin</title>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Admin</h1>
+</div>
+<a href="/admin/reset">Reset DB</a>
+<br />
+<a href="/admin/seed">Seed DB</a>
+<p>
+{% endblock %}

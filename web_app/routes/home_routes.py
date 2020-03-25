@@ -17,3 +17,7 @@ def about():
 @home_routes.route("/twitter")
 def twitter():
     return render_template("twitter.html", message="This is Twitter central. Either get a specific users tweets or display all past retrieved users and their tweets.")
+
+@home_routes.route("/admin")
+def admin():
+    return render_template("admin.html")
