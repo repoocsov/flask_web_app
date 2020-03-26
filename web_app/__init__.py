@@ -13,7 +13,6 @@ load_dotenv()
 DATABASE_URL = os.getenv("sqlite:///tweets.db", default="sqlite:///tweets.db")
 
 def create_app():
-    app.config['DEBUG'] = False
     app = Flask(__name__)
 
     app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
@@ -28,5 +27,4 @@ def create_app():
     return app
 
 if __name__ == "__main__":
-    app.config['DEBUG'] = True
     my_app = create_app()
