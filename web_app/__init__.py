@@ -10,7 +10,7 @@ from web_app.routes.twitter_routes import twitter_routes
 from web_app.routes.admin_routes import admin_routes
 
 load_dotenv()
-DATABASE_URL = os.getenv("sqlite:///tweets.db", default="sqlite:///tweets.db")
+DATABASE_URL = os.getenv("DATABASE_URL", default="sqlite:///tweets.db")
 
 def create_app():
     app = Flask(__name__)
